@@ -11,11 +11,19 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [token, setToken] = useState<string | null>(localStorage.getItem('authToken'));
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(!!token);
+  const [token, setToken] = useState<string | null>(null); // Start with null
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false); // Start with false
 
   useEffect(() => {
-    // Check if the token is expired (you could implement a token expiration check here)
+    // Check localStorage when component mounts
+    const storedToken = localStorage.getItem('authToken');
+    if (storedToken) {
+      setToken(storedToken);
+      setIsAuthenticated(true); // Assuming if there's a token, the user is authenticated
+    }
+  }, []);
+
+  useEffect(() => {
     const checkTokenValidity = () => {
       if (!token) return false; // No token means not authenticated
 
