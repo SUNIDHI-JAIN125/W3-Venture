@@ -12,7 +12,15 @@ connectDB();
 
 app.use(express.json({ extended: false
 }));
-app.use(cors());    
+const allowedOrigins = [
+    'https://w3-venture-gqt5uvxhw-sunidhis-projects.vercel.app', // Your frontend's deployed URL
+    'http://localhost:3000', // Local development environment
+  ];
+  
+  app.use(cors({
+    origin: allowedOrigins,
+    credentials: true,
+  }));   
 app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
