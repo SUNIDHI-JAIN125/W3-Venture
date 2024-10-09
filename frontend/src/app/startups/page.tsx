@@ -13,7 +13,7 @@ const StartupsPage = () => {
   useEffect(() => {
     const fetchStartups = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/auth/startups');
+        const response = await axios.get('https://backend-mubnvs28b-sunidhis-projects.vercel.app/api/auth/startups');
         setStartups(response.data);
       } catch (error: any) {
         setError(error.message);
