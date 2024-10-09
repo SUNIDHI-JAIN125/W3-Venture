@@ -1,0 +1,46 @@
+/* Import Tailwind's utilities and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root custom fonts */
+:root {
+  --font-sora: 'Sora', sans-serif;
+  --font-code: 'Source Code Pro', monospace;
+  --font-grotesk: 'Space Grotesk', sans-serif;
+  color-scheme: dark;
+}
+
+/* Base styles (adjusted for Tailwind) */
+body {
+  @apply font-sans bg-gray-900 text-white text-base;
+  font-family: var(--font-sora); /* Use the custom font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  @apply bg-gray-800 text-white py-4 text-center;
+}
+
+nav a {
+  @apply text-white mx-4 no-underline; /* Tailwind utilities */
+}
+
+footer {
+  @apply bg-gray-800 text-white py-4 text-center;
+}
+
+/* Styles for the Connect Wallet Button */
+.connect-wallet-button {
+  @apply py-2 px-4 bg-blue-600 text-white rounded-lg text-lg cursor-pointer ml-5;
+}
+
+.connect-wallet-button:hover {
+  @apply bg-blue-700; /* Tailwind handles hover state */
+}

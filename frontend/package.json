@@ -1,0 +1,47 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.10.1",
+    "@coinbase/wallet-sdk": "^4.1.0",
+    "@reown/walletkit": "^1.1.0",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.29",
+    "@walletconnect/core": "^2.17.0",
+    "@walletconnect/modal": "^2.7.0",
+    "@walletconnect/utils": "^2.17.0",
+    "@web3modal/ethereum": "^2.7.1",
+    "@web3modal/ethers": "^4.1.10",
+    "@web3modal/react": "^2.7.1",
+    "@web3modal/wagmi": "^5.1.11",
+    "axios": "^1.7.7",
+    "ethers": "^6.13.2",
+    "next": "14.2.7",
+    "react": "^18.3.1",
+    "react-dom": "^18",
+    "react-toastify": "^10.0.5",
+    "walletconnect": "^1.7.8",
+    "web3modal": "^1.9.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "nodemon": "^3.1.7",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "constants.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

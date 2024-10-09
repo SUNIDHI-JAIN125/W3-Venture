@@ -1,0 +1,12 @@
+/* styles/StartupDetails.module.css */
+.container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+  

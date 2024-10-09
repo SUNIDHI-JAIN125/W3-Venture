@@ -1,0 +1,122 @@
+
+{
+    "abi": [
+    {
+      "type": "function",
+      "name": "fundStartup",
+      "inputs": [
+        { "name": "startupId", "type": "string", "internalType": "string" }
+      ],
+      "outputs": [],
+      "stateMutability": "payable"
+    },
+    {
+      "type": "function",
+      "name": "funderToStartups",
+      "inputs": [
+        { "name": "", "type": "address", "internalType": "address" },
+        { "name": "", "type": "uint256", "internalType": "uint256" }
+      ],
+      "outputs": [{ "name": "", "type": "string", "internalType": "string" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getFundedStartups",
+      "inputs": [],
+      "outputs": [
+        { "name": "", "type": "string[]", "internalType": "string[]" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getFunders",
+      "inputs": [
+        { "name": "startupId", "type": "string", "internalType": "string" }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "tuple[]",
+          "internalType": "struct StartupFunding.Funder[]",
+          "components": [
+            {
+              "name": "walletAddress",
+              "type": "address",
+              "internalType": "address"
+            },
+            { "name": "amount", "type": "uint256", "internalType": "uint256" }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "initialize",
+      "inputs": [
+        { "name": "startupId", "type": "string", "internalType": "string" },
+        { "name": "founder", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "startups",
+      "inputs": [{ "name": "", "type": "string", "internalType": "string" }],
+      "outputs": [
+        { "name": "totalFunded", "type": "uint256", "internalType": "uint256" },
+        { "name": "founder", "type": "address", "internalType": "address" }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "Funded",
+      "inputs": [
+        {
+          "name": "startupId",
+          "type": "string",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "name": "funder",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "StartupInitialized",
+      "inputs": [
+        {
+          "name": "startupId",
+          "type": "string",
+          "indexed": false,
+          "internalType": "string"
+        },
+        {
+          "name": "founder",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    }
+  ]
+
+
+}
