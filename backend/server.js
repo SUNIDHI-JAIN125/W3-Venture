@@ -12,7 +12,7 @@ connectDB();
 
 // List of allowed origins for CORS
 const allowedOrigins = [
-  'https://w3-venture-gqt5uvxhw-sunidhis-projects.vercel.app', // Frontend production
+  'https://w3-venture-app.vercel.app/', // Frontend production
   'http://localhost:3001', // Local frontend development
   'http://localhost:5000', // Local backend development
 ];
