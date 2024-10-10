@@ -85,12 +85,9 @@ A Web3 wallet (e.g., MetaMask) installed in your browser
 
 Our Platform is deployed on Polygon Cardona(zkEVM) Testnet and Sepolia Testnet
 
-## Polygon 
-
+### Polygon 
 PolygonContractAddress = "0xff44C4A0EBC555c1e6682405a520b31aB8eE7531"
-
-## Sepolia
-
+###  Sepolia
 SepoliaContractAddress = "0x115146a36c6f0dE9276fD6fD18eB4718106cA628"
 
 
