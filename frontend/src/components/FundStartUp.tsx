@@ -58,7 +58,7 @@ const FundStartup = ({ startupId }: { startupId: string }) => {
       });
 
       // Step 4: Call the backend fundStartup function
-      await axios.post(`https://backend-mubnvs28b-sunidhis-projects.vercel.app/api/auth/startups/${startupId}/fund`, {
+      await axios.post(`https://w3-venture-avts.vercel.app/api/auth/startups/${startupId}/fund`, {
         walletAddress,
         amount: ethers.parseEther(fundingAmount).toString() // Convert to string if necessary
       });

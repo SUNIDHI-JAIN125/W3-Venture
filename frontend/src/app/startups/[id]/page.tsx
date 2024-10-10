@@ -20,7 +20,7 @@ interface Startup {
 
 async function fetchStartupDetails(id: string): Promise<Startup> {
   try {
-    const response = await fetch(`https://backend-mubnvs28b-sunidhis-projects.vercel.app/api/auth/startups/${id}`);
+    const response = await fetch(`https://w3-venture-avts.vercel.app/api/auth/startups/${id}`);
     if (!response.ok) {
       throw new Error('Failed to fetch startup details');
     }

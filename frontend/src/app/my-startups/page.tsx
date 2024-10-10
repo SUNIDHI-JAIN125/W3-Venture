@@ -42,7 +42,7 @@ const MyStartupsPage = () => {
 
     const fetchStartup = async () => {
       try {
-        const response = await fetch('https://backend-mubnvs28b-sunidhis-projects.vercel.app/api/auth/startup', {
+        const response = await fetch('https://w3-venture-avts.vercel.app/api/auth/startup', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -46,7 +46,7 @@ const StartupForm = () => {
     });
 
     try {
-      const response = await fetch('https://backend-mubnvs28b-sunidhis-projects.vercel.app/api/auth/register', {
+      const response = await fetch('https://w3-venture-avts.vercel.app/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
