@@ -1,13 +1,13 @@
 // "use client";
 import React from 'react';
 import type { Metadata } from 'next';
-import { Sora, Space_Grotesk } from 'next/font/google'; // Import custom fonts
-import '../styles/globals.css'; // Import global CSS
-import { AuthProvider } from '../context/AuthContext'; // Import the AuthProvider
-import ConnectWalletButton from '../components/ConnectWallet'; // Import the ConnectWalletButton
-import Link from 'next/link'; // Import Link for navigation
+import { Sora, Space_Grotesk } from 'next/font/google'; 
+import '../styles/globals.css'; 
+import { AuthProvider } from '../context/AuthContext'; 
+import ConnectWalletButton from '../components/ConnectWallet'; 
+import Link from 'next/link'; 
 
-// Load Google Fonts with next/font
+
 const sora = Sora({ subsets: ['latin'], weight: ['400', '600', '700'] });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['400', '600'] });
 
@@ -27,8 +27,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <body className={`${spaceGrotesk.className} bg-gray-850 min-h-screen flex flex-col`}>
         <AuthProvider>
           <header className="bg-transparent py-6 text-center">
-            <nav className="flex justify-between items-center mt-6">
-              <div className="flex space-x-8 ml-6">
+            <nav className="flex justify-between items-center mt-4 mb-4">
+              <div className="flex space-x-8 ml-6 ">
                 <a href="/" className="text-lg text-gray-300 hover:text-purple-300">Home</a>
                 <a href="/startups" className="text-lg text-gray-300 hover:text-purple-300">Startups</a>
                 <a href="/create" className="text-lg text-gray-300 hover:text-purple-300">Register Startup</a>
@@ -39,8 +39,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </div>
             </nav>
 
-            <hr className='pt-4 mt-6 text-purple-300'/>
-            <h1 className={`${sora.className} pt-32 text-7xl pb-5 font-bold text-white`}>
+            <hr className=' text-purple-300'/>
+            <h1 className={`${sora.className}  text-7xl mt-14 font-bold text-white`}>
               Fund the <span className='text-purple-400'>Startup</span> You Love
             </h1>
             <p className="text-4xl mt-4 pt-3 text-gray-300">

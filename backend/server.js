@@ -10,40 +10,38 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
-// List of allowed origins for CORS
+
 const allowedOrigins = [
-  'https://w3-venture-app.vercel.app/', // Frontend production
-  'http://localhost:3001', // Local frontend development
-  'http://localhost:5000', // Local backend development
+  'https://w3-venture-app.vercel.app/', 
+  'http://localhost:3001', 
+  'http://localhost:5000',
 ];
 
-// Configure CORS middleware
+
 app.use(cors({
   origin: function (origin, callback) {
-    // If the origin is not defined (like mobile apps or Postman), allow it
+ 
     if (!origin) return callback(null, true);
 
-    // Allow if the origin is in our allowedOrigins array
     if (allowedOrigins.includes(origin)) {
       return callback(null, true);
     } else {
-      // Block if the origin is not allowed
+     
       const msg = `The CORS policy for this site does not allow access from the specified origin: ${origin}`;
       return callback(new Error(msg), false);
     }
   },
-  credentials: true, // Allow cookies and other credentials
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  credentials: true, 
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+  allowedHeaders: ['Content-Type', 'Authorization'], 
 }));
 
-// Middleware for parsing JSON requests
+
 app.use(express.json({ extended: false }));
 
 // Routes
 app.use('/api/auth', authRoutes);
 
-// Handle OPTIONS requests (preflight requests)
 app.options('*', cors());
 
 // Start the server

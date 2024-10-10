@@ -2,12 +2,12 @@
 import { useContext, useEffect, useState } from 'react';
 import AuthContext from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
-import { ethers } from 'ethers'; // ethers.js to convert wei to ether
-import FundStartup from '../../components/FundStartUp'; // Import the FundStartup component
+import { ethers } from 'ethers'; 
+import FundStartup from '../../components/FundStartUp'; 
 
 interface Funder {
   walletAddress: string;
-  amount: number; // assuming amount is in Wei (a number type, or BigNumber if you're using ethers.js)
+  amount: number;
 }
 
 interface Startup {
@@ -31,12 +31,13 @@ const MyStartupsPage = () => {
 
   const { token, isAuthenticated } = authContext;
   const router = useRouter();
-  const [startup, setStartup] = useState<Startup | null>(null); // Initialize as null
+  const [startup, setStartup] = useState<Startup | null>(null); 
   const [error, setError] = useState<string | null>(null);
+  
 
   useEffect(() => {
     if (!isAuthenticated) {
-      router.push('/login'); // Redirect to login if not authenticated
+      router.push('/login'); 
       return;
     }
 
@@ -49,8 +50,8 @@ const MyStartupsPage = () => {
         });
 
         if (response.ok) {
-          const data: Startup = await response.json(); // Expecting a single Startup object
-          setStartup(data); // Set the single startup object
+          const data: Startup = await response.json(); 
+          setStartup(data); 
         } else {
           const errorData = await response.json();
           setError(errorData.error || 'Failed to fetch startup');
@@ -69,7 +70,7 @@ const MyStartupsPage = () => {
   if (error) return <p className="text-center text-red-500">{error}</p>;
   if (!startup) return <p className="text-center text-2xl  mt-3  text-gray-500">You have not registered any startup yet.</p>;
 
-  // Convert total funded amount from Wei to Ether
+ 
   const totalFundedInEther = (startup.totalFunded);
 
   return (
@@ -125,7 +126,7 @@ const MyStartupsPage = () => {
       </div>
 
       {/* Displaying Funders */}
-      {/* <div className="mt-4">
+      <div className="mt-4">
         <h2 className="text-2xl text-white font-semibold">Funders</h2>
         {startup.funders && startup.funders.length > 0 ? (
           <ul className="list-disc ml-5 space-y-2">
@@ -142,10 +143,10 @@ const MyStartupsPage = () => {
           <p className="text-gray-300">No funders yet.</p>
         )}
 
-        <p className="font-semibold mt-4 text-white">Total Funded: {totalFundedInEther} ETH</p>
-      </div> */}
+        {/* <p className="font-semibold mt-4 text-white">Total Funded: {totalFundedInEther} ETH</p> */}
+      </div>
 
-      {/* Add the Fund Startup component */}
+    
       <FundStartup startupId={startup.id} />
     </div>
   );

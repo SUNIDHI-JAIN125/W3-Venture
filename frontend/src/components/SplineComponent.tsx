@@ -9,7 +9,7 @@ interface SplineProps {
 
 const SplineComponent: React.FC<SplineProps> = ({ scene }) => {
   return (
-    <div className="w-full h-[39rem]">
+    <div className="w-full h-[35rem]">
       <Spline scene={scene} />
       
     </div>

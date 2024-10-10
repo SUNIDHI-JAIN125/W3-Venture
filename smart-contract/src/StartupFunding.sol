@@ -13,9 +13,9 @@ contract StartupFunding {
         Funder[] funders;
     }
 
-    // Mappings
-    mapping(string => Startup) public startups; // Maps startup ID to Startup struct
-    mapping(address => string[]) public funderToStartups; // Maps funder's address to funded startup IDs
+   
+    mapping(string => Startup) public startups; 
+    mapping(address => string[]) public funderToStartups; 
 
     // Events
     event StartupInitialized(string startupId, address indexed founder);
@@ -25,7 +25,7 @@ contract StartupFunding {
     function initialize(string memory startupId, address founder) public {
         require(startups[startupId].founder == address(0), "Startup already initialized");
         Startup storage startup = startups[startupId];
-        startup.founder = founder;  // Set the founder address
+        startup.founder = founder;  
         startup.totalFunded = 0; // Initialize total funded to 0
 
         emit StartupInitialized(startupId, founder); // Emit event

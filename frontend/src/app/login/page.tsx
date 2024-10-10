@@ -1,7 +1,7 @@
 "use client"; // Client-side logic
 import { useState, useContext } from 'react';
 import { useRouter } from 'next/navigation';
-import AuthContext from '../../context/AuthContext'; // Import the Auth context
+import AuthContext from '../../context/AuthContext'; 
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,11 +9,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const LoginPage = () => {
-  const { login } = useContext(AuthContext)!; // Use login function from context
+  const { login } = useContext(AuthContext)!;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const router = useRouter(); // Initialize useRouter hook
+  const router = useRouter(); 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

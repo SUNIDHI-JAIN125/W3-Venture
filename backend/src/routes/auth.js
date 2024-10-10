@@ -4,6 +4,8 @@ const authMiddleware = require('../middleware/auth');
 
 const router = express.Router();
 
+
+
 // Register a user and their startup
 router.post('/register', registerStartup);
 

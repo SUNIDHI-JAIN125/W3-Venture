@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
-import { PolygonContractAddress, startupABI } from './../../constants'; // Ensure ABI is correct
+import { PolygonContractAddress, startupABI } from './../../constants'; 
 
 const FundedStartupsButton = () => {
   const [fundedStartups, setFundedStartups] = useState<string[]>([]);
@@ -19,11 +19,11 @@ const FundedStartupsButton = () => {
         const signer = await provider.getSigner();
         const walletAddress = await signer.getAddress();
 
-        // Replace with your contract address
+        
         const contract = new ethers.Contract(PolygonContractAddress, startupABI, signer);
 
-        // Call the `funderToStartups` method using the connected wallet address
-        const startupCount = await contract.funderToStartups(walletAddress, 0); // Fetch first startup index to test
+     
+        const startupCount = await contract.funderToStartups(walletAddress, 0); 
 
         const fundedStartups: string[] = [];
         let index = 0;
@@ -33,12 +33,12 @@ const FundedStartupsButton = () => {
             fundedStartups.push(startupId);
             index += 1;
           } catch (error) {
-            // When there's no more funded startups for the wallet, break out of the loop
+         
             break;
           }
         }
 
-        // Check if the response is empty
+        
         if (fundedStartups.length === 0) {
           setError('No startups funded by this wallet.');
         } else {
@@ -49,7 +49,7 @@ const FundedStartupsButton = () => {
       }
     };
 
-    // Check if MetaMask is connected
+    
     if (window.ethereum) {
       window.ethereum
         .request({ method: 'eth_accounts' })

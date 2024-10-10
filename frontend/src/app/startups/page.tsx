@@ -31,11 +31,9 @@ const StartupsPage = () => {
   return (
     <div className="container mx-auto p-6">
       <header className="mb-8 flex flex-col justify-between items-center bg-transparent">
-        {/* <h1 className="text-4xl font-extrabold text-gray-200">Startups</h1> */}
+    
         <Link href="/create">
-          {/* <span className="bg-blue-600 text-white py-2 px-6 text-lg rounded-lg shadow hover:bg-blue-700 transition-all cursor-pointer">
-            Register New Startup
-          </span> */}
+         
         </Link>
       </header>
       <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">

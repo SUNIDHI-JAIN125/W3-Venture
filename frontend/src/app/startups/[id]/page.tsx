@@ -1,9 +1,9 @@
-import { ethers } from 'ethers'; // ethers.js to convert wei to ether
-import FundStartup from '../../../components/FundStartUp'; // Import the FundStartup component
+import { ethers } from 'ethers';
+import FundStartup from '../../../components/FundStartUp'; 
 
 interface Funder {
   walletAddress: string;
-  amount: number; // assuming amount is in Wei (a number type, or BigNumber if you're using ethers.js)
+  amount: number; 
 }
 
 interface Startup {
@@ -24,7 +24,7 @@ async function fetchStartupDetails(id: string): Promise<Startup> {
     if (!response.ok) {
       throw new Error('Failed to fetch startup details');
     }
-    const data: Startup = await response.json(); // Ensure this matches the Startup interface
+    const data: Startup = await response.json();
     return data;
   } catch (error: any) {
     console.error(error);
@@ -35,7 +35,7 @@ async function fetchStartupDetails(id: string): Promise<Startup> {
 const StartupDetailsPage = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
-  let startup: Startup | null = null; // Declare the startup variable with the correct type
+  let startup: Startup | null = null; 
   let error = '';
 
   try {
@@ -116,7 +116,7 @@ const StartupDetailsPage = async ({ params }: { params: { id: string } }) => {
         <p className="font-semibold mt-4 text-white">Total Funded: {totalFundedInEther} ETH</p>
       </div> */}
 
-      {/* Add the Fund Startup component */}
+     
       <FundStartup startupId={startup.id} />
     </div>
   );
