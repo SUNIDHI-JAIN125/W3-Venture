@@ -13,6 +13,7 @@ const StartupsPage = () => {
   useEffect(() => {
     const fetchStartups = async () => {
       try {
+        // check
         const response = await axios.get('https://w3-venture-avts.vercel.app/api/auth/startups');
         setStartups(response.data);
       } catch (error: any) {
