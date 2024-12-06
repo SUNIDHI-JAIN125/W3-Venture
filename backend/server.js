@@ -12,7 +12,7 @@ connectDB();
 
 
 const allowedOrigins = [
-  'https://w3-venture-app.vercel.app/', 
+  'https://w3-venture-app.vercel.app', 
   'http://localhost:3001', 
   'http://localhost:5000',
 ];
