@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ethers } from 'ethers';
-import { startupABI, PolygonContractAddress } from '../../constants';
+import { startupABI, PolygonContractAddress , SERVER_URL} from '../../constants';
 import { connectWallet } from '../utils/wallet';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,7 +46,7 @@ const StartupForm = () => {
     });
 
     try {
-      const response = await fetch('https://w3-venture-avts.vercel.app/api/auth/register', {
+      const response = await fetch(`${SERVER_URL}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

@@ -4,6 +4,7 @@ import AuthContext from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { ethers } from 'ethers'; 
 import FundStartup from '../../components/FundStartUp'; 
+import {SERVER_URL}  from "../../../constants.js";
 
 interface Funder {
   walletAddress: string;
@@ -43,7 +44,7 @@ const MyStartupsPage = () => {
 
     const fetchStartup = async () => {
       try {
-        const response = await fetch('https://w3-venture-avts.vercel.app/api/auth/startup', {
+        const response = await fetch(`${SERVER_URL}/startup`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

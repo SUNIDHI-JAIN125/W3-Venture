@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import {SERVER_URL}  from "../../../constants.js";
 import StartupCard from '../../components/StartupCard';
 
 const StartupsPage = () => {
@@ -13,8 +14,7 @@ const StartupsPage = () => {
   useEffect(() => {
     const fetchStartups = async () => {
       try {
-        // check
-        const response = await axios.get('https://w3-venture-avts.vercel.app/api/auth/startups');
+        const response = await axios.get(`${SERVER_URL}/startups`);
         setStartups(response.data);
       } catch (error: any) {
         setError(error.message);

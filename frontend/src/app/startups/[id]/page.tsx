@@ -1,5 +1,6 @@
 import { ethers } from 'ethers';
 import FundStartup from '../../../components/FundStartUp'; 
+import {SERVER_URL}  from "../../../../constants";
 
 interface Funder {
   walletAddress: string;
@@ -20,7 +21,7 @@ interface Startup {
 
 async function fetchStartupDetails(id: string): Promise<Startup> {
   try {
-    const response = await fetch(`https://w3-venture-avts.vercel.app/api/auth/startups/${id}`);
+    const response = await fetch(`${SERVER_URL}/startups/${id}`);
     if (!response.ok) {
       throw new Error('Failed to fetch startup details');
     }

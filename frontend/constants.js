@@ -45,3 +45,6 @@ export const Polygon = {
 
 }
 
+
+export const SERVER_URL = "http://localhost:3000/api/auth"
+// export const SERVER_URL = "https://w3-venture-avts.vercel.app/api/auth"

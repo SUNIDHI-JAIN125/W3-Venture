@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
 import { useRouter } from 'next/navigation';
-import { startupABI, PolygonContractAddress } from '../../constants'; 
+import { startupABI, PolygonContractAddress, SERVER_URL } from '../../constants'; 
 import { connectWallet } from '../utils/wallet'; 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -56,7 +56,7 @@ const FundStartup = ({ startupId }: { startupId: string }) => {
       });
 
      
-      await axios.post(`https://w3-venture-avts.vercel.app/api/auth/startups/${startupId}/fund`, {
+      await axios.post(`${SERVER_URL}/startups/${startupId}/fund`, {
         walletAddress,
         amount: ethers.parseEther(fundingAmount).toString() 
       });
