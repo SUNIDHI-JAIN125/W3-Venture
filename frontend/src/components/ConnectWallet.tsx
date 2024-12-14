@@ -25,8 +25,8 @@ const ConnectWalletButton: React.FC = () => {
       {walletAddress ? (
         
         <div className="flex items-center ">
-          <p className="text-gray-100 font-semibold">Wallet Connected:</p>
-          <p className="truncate">{walletAddress}</p>
+          <p className="text-gray-300 font-semibold mr-3">Wallet Connected:</p>
+          <p className=" text-white truncate">{walletAddress}</p>
         </div>
       ) : (
        
