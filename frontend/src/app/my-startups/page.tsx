@@ -75,7 +75,7 @@ const MyStartupsPage = () => {
 
   return (
     <div className="container mx-auto p-10 max-w-5xl bg-transparent border-2 border-gray-300 rounded-xl mt-10">
-      {/* Startup Header */}
+   
       <div className="flex items-start mb-6">
         <img
           src='/start.jpg'
@@ -87,13 +87,12 @@ const MyStartupsPage = () => {
 
       <hr className="border-gray-300 mb-6" />
 
-      {/* Description and Resources */}
+     
       <div className="mb-8">
         <p className="text-xl font-semibold text-gray-900 mb-4">Description</p>
         <p className="text-lg text-gray-600">{startup.description}</p>
       </div>
 
-      {/* Resources */}
       <div className="mb-8">
         <p className="text-xl font-semibold text-gray-900 mb-4">Resources</p>
         <div className="space-y-4">
@@ -128,7 +127,7 @@ const MyStartupsPage = () => {
 
       <hr className="border-gray-300 mb-6" />
 
-      {/* Funders */}
+     
       <div className="mb-8">
         <p className="text-xl font-semibold text-gray-900 mb-4">Funders</p>
         {startup.funders && startup.funders.length > 0 ? (
@@ -147,7 +146,7 @@ const MyStartupsPage = () => {
 
      
 
-      {/* FundStartup Component */}
+     
       <FundStartup startupId={startup.id} />
     </div>
   );

@@ -89,7 +89,7 @@ const StartupForm = () => {
     <div className="bg-white shadow-lg rounded-lg p-8">
       <ToastContainer />
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Startup Fields */}
+       
         <div>
           <label className="block text-lg font-medium text-gray-700 mb-2">Your Name</label>
           <input
@@ -123,7 +123,7 @@ const StartupForm = () => {
           />
         </div>
 
-        {/* Startup Information */}
+      
         <div>
           <label className="block text-lg font-medium text-gray-700 mb-2">Startup Name</label>
           <input

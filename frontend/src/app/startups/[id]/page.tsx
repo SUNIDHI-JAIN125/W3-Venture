@@ -51,7 +51,7 @@ const StartupDetailsPage = async ({ params }: { params: { id: string } }) => {
 
   return (
     <div className="container mx-auto  p-10 max-w-4xl border-2 border-gray-300 bg-white shadow-lg rounded-xl mt-10">
-      {/* Startup Header */}
+    
       <div className="flex items-center mb-6">
         <img
           src="/start.jpg"
@@ -63,13 +63,13 @@ const StartupDetailsPage = async ({ params }: { params: { id: string } }) => {
 
       <hr className="border-gray-300 mb-6" />
 
-      {/* Description and Resources */}
+  
       <div className="mb-8">
         <p className="text-xl font-semibold text-gray-900 mb-4">Description</p>
         <p className="text-lg text-gray-600">{startup.description}</p>
       </div>
 
-      {/* Resources */}
+     
       <div className="mb-8">
         <p className="text-xl font-semibold text-gray-900 mb-4">Resources</p>
         <div className="space-y-4">
@@ -106,7 +106,6 @@ const StartupDetailsPage = async ({ params }: { params: { id: string } }) => {
 
      
 
-      {/* FundStartup Component */}
       <FundStartup startupId={startup.id} />
 
      

@@ -1,4 +1,4 @@
-"use client"; // Client-side logic
+"use client"; 
 import { useState, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import AuthContext from '../../context/AuthContext'; 
@@ -11,7 +11,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false); // Loading state for the submit button
+  const [loading, setLoading] = useState(false); 
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -17,7 +17,7 @@ const StartupCard: React.FC<StartupCardProps> = ({ startup }) => {
 
   return (
     <div className="bg-white border border-gray-300 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl overflow-hidden">
-      {/* Placeholder for startup image */}
+    
       <div className="h-48 bg-gray-200 flex justify-center items-center">
         <img
           src={startup.image}

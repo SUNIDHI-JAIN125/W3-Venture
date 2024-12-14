@@ -8,41 +8,40 @@ const sora = Sora({ subsets: ["latin"], weight: ["400", "600", "700"] });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["400", "600"] });
 
 const HomePage = () => {
-  // State to manage background color
-  const [bgColor, setBgColor] = useState("#ebdedc"); // Default background color
+ 
+  const [bgColor, setBgColor] = useState("#ebdedc");
 
-  // Function to handle the scroll event
   const handleScroll = () => {
-    const scrollPosition = window.scrollY; // Get current scroll position
-    console.log('Scroll Position:', scrollPosition); // Log scroll position for debugging
+    const scrollPosition = window.scrollY; 
+    console.log('Scroll Position:', scrollPosition); 
 
-    const threshold = 1000; // Set a lower threshold for color change
+    const threshold = 1000; 
     if (scrollPosition > threshold) {
-      console.log('Threshold Reached: Changing Background Color'); // Log when threshold is reached
-      setBgColor("#E0B0FF"); // Darker purple color (lighter purple previously #D8B7DD)
+      console.log('Threshold Reached: Changing Background Color');
+      setBgColor("#E0B0FF"); 
     } else {
-      setBgColor("#ebdedc"); // Default background color
+      setBgColor("#ebdedc"); 
     }
   };
 
-  // Ensure this effect runs only on the client-side (after component mount)
+  
   useEffect(() => {
-    // Check if window is available (client-side check)
+  
     if (typeof window !== "undefined") {
-      console.log("Component mounted, setting up scroll listener..."); // Log when the component is mounted
+      console.log("Component mounted, setting up scroll listener...");
       window.addEventListener("scroll", handleScroll);
 
-      // Cleanup the event listener when the component is unmounted
+     
       return () => window.removeEventListener("scroll", handleScroll);
     }
-  }, []); // Empty dependency array to run only once when component is mounted
+  }, []); 
 
   return (
     <div
       className="flex flex-col text-white min-h-screen  "
       style={{
-        backgroundColor: bgColor, // Dynamically set background color
-        transition: "background-color 1s ease-in-out", // Faster transition (0.2s for quicker change)
+        backgroundColor: bgColor, 
+        transition: "background-color 1s ease-in-out", 
       }}
     >
       {/* Left Content */}
@@ -79,13 +78,13 @@ const HomePage = () => {
         </p>
       </div>
 
-      {/* Stacked Images */}
+    
       <div className="mt-24 pr-[20%] flex flex-col items-end space-y-[-60px]">
-        {/* First Image - Larger Size */}
+       
         <div
           className="relative w-[700px] h-[450px] border-8 border-black shadow-lg z-10 rounded-2xl"
           style={{
-            boxShadow: "0 0 0 2px #FF69B4", // Outer border added outside the black border
+            boxShadow: "0 0 0 2px #FF69B4", 
           }}
         >
           <Image
@@ -96,11 +95,10 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Second Image (behind the first) - Larger Size */}
         <div
           className="relative w-[680px] h-[430px] border-8 border-black shadow-lg -translate-y-16 translate-x-20 z-5 rounded-2xl"
           style={{
-            boxShadow: "0 0 0 2px #FF69B4", // Outer border added outside the black border
+            boxShadow: "0 0 0 2px #FF69B4", 
           }}
         >
           <Image
@@ -111,11 +109,10 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Third Image (behind the second) - Adjusted */}
         <div
           className="relative w-[660px] h-[410px] border-8 border-black shadow-lg -translate-y-[5rem] translate-x-[12rem] z-0 rounded-2xl"
           style={{
-            boxShadow: "0 0 0 2px #FF69B4", // Outer border added outside the black border
+            boxShadow: "0 0 0 2px #FF69B4", 
           }}
         >
           <Image
@@ -127,7 +124,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Register Startup Section */}
+    
       <div className="flex flex-col items-center justify-center text-center gap-6 mb-6 mt-28 space-y-6">
         <h2 className={`${sora.className} text-4xl xl:text-6xl font-extrabold text-gray-100`}>
           Ready to Launch Your Startup?
@@ -137,7 +134,7 @@ const HomePage = () => {
           register your startup today and let us help you make your dreams come true!
         </p>
 
-        {/* Main Registration Image */}
+      
         <div className="relative w-[600px] m h-[400px] border-8 border-black shadow-lg rounded-2xl">
           <Image
             src="/Image.png"

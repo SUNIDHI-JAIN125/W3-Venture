@@ -34,7 +34,7 @@ const LoginForm = () => {
       }
 
       const data = await response.json();
-      console.log(data); // Handle the successful login response here, e.g., redirecting the user
+      console.log(data);
     } catch (error) {
       setError('Login failed. Please check your credentials.');
       console.error('Error:', error);
