@@ -12,29 +12,19 @@
   --font-sora: 'Sora', sans-serif;
   --font-code: 'Source Code Pro', monospace;
   --font-grotesk: 'Space Grotesk', sans-serif;
-  color-scheme: dark;
+ 
 }
 
 /* Base styles (adjusted for Tailwind) */
 body {
-  @apply font-sans bg-gray-900 text-white text-base;
   font-family: var(--font-sora); /* Use the custom font */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
-header {
-  @apply bg-gray-800 text-white py-4 text-center;
-}
 
-nav a {
-  @apply text-white mx-4 no-underline; /* Tailwind utilities */
-}
-
-footer {
-  @apply bg-gray-800 text-white py-4 text-center;
-}
 
 /* Styles for the Connect Wallet Button */
 .connect-wallet-button {

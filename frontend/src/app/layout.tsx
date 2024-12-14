@@ -21,11 +21,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Startup Platform</title>
       </head>
-      <body className={`${spaceGrotesk.className} bg-[#ebdedc] min-h-screen flex flex-col`}>
+      <body className={`${spaceGrotesk.className} min-h-screen flex flex-col`}>
         <AuthProvider>
           <Navbar />
-          <main className="flex-grow py-10">{children}</main>
-          <footer className="text-center py-6 border-t border-gray-700">
+          <main className="flex-grow">{children}</main>
+          <footer className="bg-gray-800 text-center py-6 text-gray-300 mt-auto">
             <p>&copy; 2024 Startup Platform</p>
           </footer>
         </AuthProvider>

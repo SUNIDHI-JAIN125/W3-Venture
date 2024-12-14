@@ -6,28 +6,38 @@ interface StartupCardProps {
     _id: string;
     startupName: string;
     image: string;
-    description: string;  
-    totalFunded:Number;
+    description: string;
+    totalFunded: number;
   };
 }
 
-
-
 const StartupCard: React.FC<StartupCardProps> = ({ startup }) => {
 
-  const totalFunded  = startup.totalFunded.toString();
+  const totalFunded = startup.totalFunded.toString();
+
   return (
-    <div className="bg-transparent border-2  rounded-lg border-purple-200 shadow-lg transition-transform transform  overflow-hidden">
+    <div className="bg-white border border-gray-300 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl overflow-hidden">
       {/* Placeholder for startup image */}
-      <div className="h-12 bg-purple-200 flex  p-4 justify-center">
-        <p className="text-black font-bold text-xl items-center justify-center m-auto"> Total Funded - {totalFunded} wei</p>
+      <div className="h-48 bg-gray-200 flex justify-center items-center">
+        <img
+          src={startup.image}
+          alt={startup.startupName}
+          className="object-cover w-full h-full"
+        />
       </div>
+
       <div className="p-6">
-        <h2 className="text-4xl font-bold text-white mb-2 pt-3 mt-2">{startup.startupName}</h2>
-        <p className="text-gray-400 mb-4 text-2xl pt-3 mt-2">{startup.description}</p>
-        <Link href={`/startups/${startup._id}`}>
-          <p className="text-white font-bold pt-6 mt-6 hover:text-purple-400">EXPLORE MORE -  </p>
-        </Link>
+        <h2 className="text-2xl font-semibold text-black mb-2">{startup.startupName}</h2>
+        <p className="text-gray-500 text-lg mb-4">{startup.description}</p>
+
+        <div className="flex justify-between items-center">
+          <p className="text-sm text-gray-800">Total Funded: {totalFunded} wei</p>
+          <Link href={`/startups/${startup._id}`}>
+            <p className="text-purple-600 hover:text-purple-800 font-semibold text-lg cursor-pointer">
+              Explore More
+            </p>
+          </Link>
+        </div>
       </div>
     </div>
   );

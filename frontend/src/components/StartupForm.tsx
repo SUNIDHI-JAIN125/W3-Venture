@@ -1,10 +1,11 @@
-"use client"; 
+"use client";
+
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ethers } from 'ethers';
-import { startupABI, PolygonContractAddress , SERVER_URL} from '../../constants';
+import { startupABI, PolygonContractAddress, SERVER_URL } from '../../constants';
 import { connectWallet } from '../utils/wallet';
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const StartupForm = () => {
@@ -49,7 +50,7 @@ const StartupForm = () => {
       const response = await fetch(`${SERVER_URL}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -85,12 +86,12 @@ const StartupForm = () => {
   };
 
   return (
-    <div className="bg-transparent shadow-lg border-4 border-blue-300 rounded-lg p-8">
+    <div className="bg-white shadow-lg rounded-lg p-8">
       <ToastContainer />
-
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Startup Fields */}
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Your Name</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Your Name</label>
           <input
             type="text"
             name="name"
@@ -101,7 +102,7 @@ const StartupForm = () => {
         </div>
 
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Email</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Email</label>
           <input
             type="email"
             name="email"
@@ -112,7 +113,7 @@ const StartupForm = () => {
         </div>
 
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Password</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Password</label>
           <input
             type="password"
             name="password"
@@ -122,8 +123,9 @@ const StartupForm = () => {
           />
         </div>
 
+        {/* Startup Information */}
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Startup Name</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Startup Name</label>
           <input
             type="text"
             name="startupName"
@@ -134,7 +136,7 @@ const StartupForm = () => {
         </div>
 
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Description</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Description</label>
           <textarea
             name="description"
             placeholder="Describe your startup"
@@ -144,7 +146,7 @@ const StartupForm = () => {
         </div>
 
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Website URL</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Website URL</label>
           <input
             type="text"
             name="website"
@@ -155,7 +157,7 @@ const StartupForm = () => {
         </div>
 
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Documentation URL</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Documentation URL</label>
           <input
             type="text"
             name="docs"
@@ -166,7 +168,7 @@ const StartupForm = () => {
         </div>
 
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Wallet Address</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Wallet Address</label>
           <input
             type="text"
             name="walletAddress"
@@ -177,7 +179,7 @@ const StartupForm = () => {
         </div>
 
         <div>
-          <label className="block text-lg font-medium text-white mb-2">Image URL</label>
+          <label className="block text-lg font-medium text-gray-700 mb-2">Image URL</label>
           <input
             type="text"
             name="image"
@@ -189,7 +191,7 @@ const StartupForm = () => {
 
         <button
           type="submit"
-          className={`w-full py-3 mt-5 pt-3   text-xl font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors ${
+          className={`w-full py-3 mt-5 text-xl font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors ${
             loading ? 'opacity-50 cursor-not-allowed' : ''
           }`}
           disabled={loading}
