@@ -39,7 +39,7 @@ const HomePage = () => {
 
   return (
     <div
-      className="flex flex-col text-white min-h-screen "
+      className="flex flex-col text-white min-h-screen  "
       style={{
         backgroundColor: bgColor, // Dynamically set background color
         transition: "background-color 1s ease-in-out", // Faster transition (0.2s for quicker change)
@@ -128,7 +128,7 @@ const HomePage = () => {
       </div>
 
       {/* Register Startup Section */}
-      <div className="flex flex-col items-center justify-center text-center gap-6 mt-28 space-y-6">
+      <div className="flex flex-col items-center justify-center text-center gap-6 mb-6 mt-28 space-y-6">
         <h2 className={`${sora.className} text-4xl xl:text-6xl font-extrabold text-gray-100`}>
           Ready to Launch Your Startup?
         </h2>
@@ -138,9 +138,9 @@ const HomePage = () => {
         </p>
 
         {/* Main Registration Image */}
-        <div className="relative w-[600px]  h-[400px] border-8 border-black shadow-lg rounded-2xl">
+        <div className="relative w-[600px] m h-[400px] border-8 border-black shadow-lg rounded-2xl">
           <Image
-            src="/register-image.png"
+            src="/Image.png"
             alt="Register your startup"
             fill
             className="object-cover"
