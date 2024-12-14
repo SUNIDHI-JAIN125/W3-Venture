@@ -22,15 +22,15 @@ const Navbar = () => {
      
         <div className="flex items-center space-x-2">
 
-          <a href="/" className="text-lg xl:text-xl font-semibold text-[#f7b302]">
+          <a href="/" className="text-xl font-semibold text-[#f7b302]">
             W3 Venture
           </a>
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-700 focus:outline-none"
+            className="text-gray-200 focus:outline-none"
             aria-label="Toggle navigation"
           >
             <svg
@@ -60,7 +60,7 @@ const Navbar = () => {
         </div>
 
        
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden lg:flex space-x-10">
           <a
             href="/"
             className={`text-lg p-1  font-semibold transition-all duration-300  ${
@@ -98,8 +98,12 @@ const Navbar = () => {
       </nav>
 
   
+
+
+{/*   mobile screens */}
+
       {menuOpen && (
-        <div className="md:hidden mt-4 space-y-4 px-6">
+        <div className="lg:hidden mt-4 space-y-4 px-6">
           <a
             href="/"
             className={`block  text-start ml-4 text-lg font-semibold transition-all duration-300 ${

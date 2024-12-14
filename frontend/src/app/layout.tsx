@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Startup Platform</title>
       </head>
-      <body className={`${spaceGrotesk.className} bg-[#ede5e3] min-h-screen flex flex-col`}>
+      <body className={`${spaceGrotesk.className} bg-[#ebdedc] min-h-screen flex flex-col`}>
         <AuthProvider>
           <Navbar />
           <main className="flex-grow py-10">{children}</main>
