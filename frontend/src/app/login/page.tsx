@@ -6,9 +6,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {SERVER_URL}  from "../../../constants.js";
 
-
-
-
 const LoginPage = () => {
   const { login } = useContext(AuthContext)!;
   const [email, setEmail] = useState('');
