@@ -40,11 +40,11 @@ const StartupsPage = () => {
     <h1 className="text-4xl xl:text-5xl font-extrabold text-black">
       Discover Startups You Can Invest In
     </h1>
-    <p className="mt-4 text-lg text-gray-600">
+    <p className="mt-6 text-lg text-gray-600">
       Browse through the latest startups that are ready for funding and take part in their growth journey!
     </p>
     <Link href="/create">
-      <button className="mt-6 px-6 py-3 bg-gray-800 text-white text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-105  hover:shadow-2xl focus:outline-none">
+      <button className="mt-8 px-6 py-3 bg-gray-800 text-white text-lg font-semibold rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-105  hover:shadow-2xl focus:outline-none">
         Register Startup
       </button>
     </Link>
