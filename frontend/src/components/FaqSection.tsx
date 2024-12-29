@@ -65,7 +65,7 @@ const FaqSection: React.FC = () => {
               className="flex justify-between items-center w-full text-left"
               onClick={() => toggleFaq(index)}
             >
-              <h3 className="text-lg font-medium text-black">
+              <h3 className="text-2xl font-medium text-black">
                 {faq.question}
               </h3>
               <span className="text-xl font-bold text-black">
@@ -73,7 +73,7 @@ const FaqSection: React.FC = () => {
               </span>
             </button>
             {openIndex === index && (
-              <p className="mt-4 text-gray-700 text-md">{faq.answer}</p>
+              <p className="mt-4 text-gray-700 text-xl">{faq.answer}</p>
             )}
           </div>
         ))}
