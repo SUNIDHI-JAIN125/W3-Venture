@@ -21,27 +21,27 @@ Foster a community of supporters who believe in the vision of emerging startups 
  Utilize smart contracts to automate investment processes and ensure that funds are released based on predefined milestones.
 
 
-### 📂 Project Structure
 
-**Frontend:**  Next.js + ethers.js for seamless blockchain interaction.
+## 📂 Project Structure
 
-**Backend:** Node.js, Express (for API gateway and off-chain operations).
+- **Frontend:**  Next.js + ethers.js for seamless blockchain interaction.
 
-**Blockchain:** Polygon and Ethereum to handle fundraising and transaction logic.
+- **Backend:** Node.js, Express (for API gateway and off-chain operations).
 
-**Database:** MongoDB for off-chain data storage and project details.
+- **Blockchain:** Polygon and Ethereum to handle fundraising and transaction logic.
+
+- **Database:** MongoDB for off-chain data storage and project details.
 
 
-### Getting Started
+
+## Getting Started
+
 
 ### Prerequisites
-Node.js and npm installed
-
-Yarn or npm
-
-Foundry (for smart contract development)
-
-A Web3 wallet (e.g., MetaMask) installed in your browser
+- Node.js and npm installed
+- Yarn or npm
+- Foundry (for smart contract development)
+- A Web3 wallet (e.g., MetaMask) installed in your browser
 
 ### Installation
 
