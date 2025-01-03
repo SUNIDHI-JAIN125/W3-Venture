@@ -59,23 +59,34 @@ Foster a community of supporters who believe in the vision of emerging startups 
    # or
    npm install
    ```
-
+   
 3. **Run the frontend:**
     ```bash
     yarn dev
     # or
     npm run dev
     ```
-   
+    
+4. **Start the Backend Server:**
+   ```bash
+    cd backend
+    yarn install
+    # or
+    npm install
 
-4. **Compile the smart contracts:**
+    yarn dev
+    # or
+    npm run dev
+   ```
+  
+5. **Compile the smart contracts:**
     ```bash
     cd smart-contract
     forge build
     ```
   
 
-5. **Deploy the smart contracts:**
+6. **Deploy the smart contracts:**
     ```bash
     forge script script/DeployStartupFunding.s.sol:Deploy --broadcast
      ```
