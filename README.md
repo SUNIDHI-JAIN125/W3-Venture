@@ -49,7 +49,7 @@ Foster a community of supporters who believe in the vision of emerging startups 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/SUNIDHI-JAIN125/W3-Venture.git
-   cd backend
+   cd W3-Venture
    ```
 
 2. **Install dependencies:**
