@@ -101,10 +101,11 @@ Foster a community of supporters who believe in the vision of emerging startups 
 Our Platform is deployed on Polygon Cardona(zkEVM) Testnet and Sepolia Testnet
 
 ### Polygon 
-PolygonContractAddress = "0xff44C4A0EBC555c1e6682405a520b31aB8eE7531"
+- PolygonContractAddress = "0xff44C4A0EBC555c1e6682405a520b31aB8eE7531"
 ###  Sepolia
-SepoliaContractAddress = "0x115146a36c6f0dE9276fD6fD18eB4718106cA628"
-
+- SepoliaContractAddress = "0x115146a36c6f0dE9276fD6fD18eB4718106cA628"
+  
+<br/>
 
 ### Contributing
 Contributions to Ringle are welcome! Feel free to report bugs, suggest features, or submit pull requests
