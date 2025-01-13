@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Sora, Space_Grotesk } from "next/font/google"; 
 import "../styles/globals.css"; 
 import { AuthProvider } from "../context/AuthContext"; 
@@ -26,7 +27,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Navbar />
           <main className="flex-grow">{children}</main>
           <footer className="bg-gray-800 text-center py-6 text-gray-300 mt-auto">
-            <p>&copy; 2024 Startup Platform</p>
+            <p>Sunidhi Jain   <Link
+            href="https://github.com/SUNIDHI-JAIN125/W3-Venture"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline ml-4"
+          >
+            <span className="hover:underline">GitHub</span>
+          </Link> <br /> &copy; 2024 Startup Platform </p>
           </footer>
         </AuthProvider>
       </body>

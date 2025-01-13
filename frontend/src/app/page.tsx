@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Sora } from "next/font/google";
 import ImageSection from "../components/ImageSection";
 import FaqSection from "../components/FaqSection";
-import Image from "next/image";
+
 
 const sora = Sora({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
